@@ -1,6 +1,8 @@
-<body>
-  <app-nav-menu></app-nav-menu>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-</body>
+<p>Hello</p>
+
+<ngx-codemirror id="codemirror"
+                [options]="codeMirrorOptions"
+                [(ngModel)]="obj">
+</ngx-codemirror>
+
+<button mat-button (click)="sendToServer()">Basic</button>

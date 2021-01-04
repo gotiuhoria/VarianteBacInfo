@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8807c607-0d5f-4c53-9253-d38f6162c170" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/security/app-user-auth.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/security/app-user-claim.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/security/app-user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/security/auth.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/security/has-claim.directive.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/security/http-interceptor.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/security/login.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/security/login.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/security/login.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/security/security.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.app.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1mLkdxBA4SK8IVAC38vdoWyFmIY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="D:/Repos/VarianteBacInfo/PTC" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="ts.external.directory.path" value="D:\MyProjects\JWTAngular\PTC\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyProjects\JWTAngular\PTC\src\app" />
+      <recent name="D:\MyProjects\JWTAngular\PTC\src\app\security" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests (PTC)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (PTC)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8807c607-0d5f-4c53-9253-d38f6162c170" name="Default Changelist" comment="" />
+      <created>1609280349128</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609280349128</updated>
+      <workItem from="1609280350769" duration="3997000" />
+      <workItem from="1609284605006" duration="2280000" />
+      <workItem from="1609360586107" duration="8608000" />
+      <workItem from="1609422910908" duration="4660000" />
+      <workItem from="1609636346710" duration="7015000" />
+      <workItem from="1609798838370" duration="68000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="556" y="307" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609284124242">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="556" y="307" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1609284124242" />
+    <state x="627" y="210" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609360698051">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="627" y="210" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609360698051" />
+    <state x="681" y="219" key="FileChooserDialogImpl" timestamp="1609798905233">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="681" y="219" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609798905233" />
+    <state x="382" y="78" key="SettingsEditor" timestamp="1609282943899">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="382" y="78" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1609282943899" />
+    <state x="566" y="194" width="787" height="652" key="find.popup" timestamp="1609543364333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="566" y="194" width="787" height="652" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1609543364333" />
+    <state x="1012" y="240" key="run.anything.popup" timestamp="1609375053063">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1012" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1609375053063" />
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1609281776565">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1609281776565" />
+  </component>
+</project>

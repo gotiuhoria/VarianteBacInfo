@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MyProjects\\JWTAngular\\PtcApi\\PtcApi.csproj": {}
+    "D:\\Repos\\VarianteBacInfo\\VarianteBacInfo\\VarianteBacInfo-1.0\\PtcApi\\PtcApi.csproj": {}
   },
   "projects": {
-    "D:\\MyProjects\\JWTAngular\\PtcApi\\PtcApi.csproj": {
+    "D:\\Repos\\VarianteBacInfo\\VarianteBacInfo\\VarianteBacInfo-1.0\\PtcApi\\PtcApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyProjects\\JWTAngular\\PtcApi\\PtcApi.csproj",
+        "projectUniqueName": "D:\\Repos\\VarianteBacInfo\\VarianteBacInfo\\VarianteBacInfo-1.0\\PtcApi\\PtcApi.csproj",
         "projectName": "PtcApi",
-        "projectPath": "D:\\MyProjects\\JWTAngular\\PtcApi\\PtcApi.csproj",
+        "projectPath": "D:\\Repos\\VarianteBacInfo\\VarianteBacInfo\\VarianteBacInfo-1.0\\PtcApi\\PtcApi.csproj",
         "packagesPath": "C:\\Users\\gotiu\\.nuget\\packages\\",
-        "outputPath": "D:\\MyProjects\\JWTAngular\\PtcApi\\obj\\",
+        "outputPath": "D:\\Repos\\VarianteBacInfo\\VarianteBacInfo\\VarianteBacInfo-1.0\\PtcApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

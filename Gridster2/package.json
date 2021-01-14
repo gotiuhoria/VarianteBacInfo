@@ -1,0 +1,84 @@
+{
+  "name": "angular-gridster2",
+  "version": "11.0.1",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "serve": "ng serve",
+    "build": "ng build",
+    "build-lib": "ng build angular-gridster2",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "build-demo": "ng build --prod",
+    "build-npm": "ng build angular-gridster2 --prod",
+    "deploy": "ng deploy",
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
+  },
+  "homepage": "https://tiberiuzuld.github.io/angular-gridster2",
+  "bugs": {
+    "url": "https://github.com/tiberiuzuld/angular-gridster2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tiberiuzuld/angular-gridster2.git"
+  },
+  "description": "Angular gridster 2",
+  "keywords": [
+    "angular",
+    "angular2",
+    "typescript",
+    "dashboard",
+    "gridster",
+    "gridster2",
+    "resize",
+    "drag&drop",
+    "widgets"
+  ],
+  "authors": [
+    "Tiberiu Zuld"
+  ],
+  "files": [
+    "dist/*"
+  ],
+  "dependencies": {
+    "@angular/animations": "11.0.5",
+    "@angular/cdk": "11.0.3",
+    "@angular/common": "11.0.5",
+    "@angular/compiler": "11.0.5",
+    "@angular/core": "11.0.5",
+    "@angular/forms": "11.0.5",
+    "@angular/material": "11.0.3",
+    "@angular/platform-browser": "11.0.5",
+    "@angular/platform-browser-dynamic": "11.0.5",
+    "@angular/router": "11.0.5",
+    "devextreme": "20.2.4",
+    "devextreme-angular": "20.2.4",
+    "ngx-markdown": "11.0.1",
+    "rxjs": "6.6.3",
+    "tslib": "2.0.3",
+    "zone.js": "0.11.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "0.1100.5",
+    "@angular/cli": "11.0.5",
+    "@angular/compiler-cli": "11.0.5",
+    "@types/jasmine": "3.6.2",
+    "@types/node": "14.14.16",
+    "angular-cli-ghpages": "1.0.0-rc.1",
+    "codelyzer": "6.0.1",
+    "jasmine-core": "3.6.0",
+    "jasmine-spec-reporter": "6.0.0",
+    "karma": "5.2.3",
+    "karma-chrome-launcher": "3.1.0",
+    "karma-coverage": "2.0.3",
+    "karma-jasmine": "4.0.1",
+    "karma-jasmine-html-reporter": "1.5.4",
+    "ng-packagr": "11.0.3",
+    "protractor": "7.0.0",
+    "ts-node": "9.1.1",
+    "tslint": "6.1.3",
+    "typescript": "4.0.5"
+  }
+}

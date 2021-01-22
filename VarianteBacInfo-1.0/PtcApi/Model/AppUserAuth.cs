@@ -4,10 +4,11 @@ namespace PtcApi.Model
 {
   public class AppUserAuth
   {
-    public AppUserAuth() : base()
+    public AppUserAuth()
     {
       UserName = "Not authorized";
       BearerToken = string.Empty;
+	  Claims = new List<AppUserClaim>();
     }
 
     public string UserName { get; set; }

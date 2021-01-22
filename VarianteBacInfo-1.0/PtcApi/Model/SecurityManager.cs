@@ -61,16 +61,17 @@ namespace PtcApi.Security
 
 		protected AppUserAuth BuildUserAuthObject(AppUser authUser)
 		{
-			AppUserAuth ret = new AppUserAuth();
-			List<AppUserClaim> claims = new List<AppUserClaim>();
+			var ret = new AppUserAuth
+			{
+				UserName = authUser.UserName,
+				IsAuthenticated = true,
+				BearerToken = new Guid().ToString(),
+				Claims = GetUserClaims(authUser)
+			};
 
 			// Set User Properties
-			ret.UserName = authUser.UserName;
-			ret.IsAuthenticated = true;
-			ret.BearerToken = new Guid().ToString();
 
 			// Get all claims for this user
-			ret.Claims = GetUserClaims(authUser);
 
 			// Set JWT bearer token
 			ret.BearerToken = BuildJwtToken(ret);
@@ -78,7 +79,7 @@ namespace PtcApi.Security
 			return ret;
 		}
 
-		protected string BuildJwtToken(AppUserAuth authUser)
+		public string BuildJwtToken(AppUserAuth authUser)
 		{
 			SymmetricSecurityKey key = new SymmetricSecurityKey(
 			  Encoding.UTF8.GetBytes(_settings.Key));

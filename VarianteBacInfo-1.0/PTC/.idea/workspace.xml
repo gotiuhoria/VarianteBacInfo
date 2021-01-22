@@ -2,82 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8807c607-0d5f-4c53-9253-d38f6162c170" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/DesignTimeBuild/.dtbcache" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/DesignTimeBuild/.dtbcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/Server/sqlite3/storage.ide" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/Server/sqlite3/storage.ide-shm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/Server/sqlite3/storage.ide-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/Controllers/SecurityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/Controllers/SecurityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/Model/PtcDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/Model/PtcDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/Model/AppUserAuth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/Model/AppUserAuth.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/Model/SecurityManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/Model/SecurityManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/PtcApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/PtcApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Data.SqlClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Data.SqlClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.SqlServer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.SqlServer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Caching.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Caching.Memory.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.DependencyInjection.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Logging.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Options.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Primitives.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Identity.Client.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Identity.Client.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Protocols.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Win32.Registry.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/PtcApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/PtcApi.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/PtcApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/PtcApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/PtcApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/PtcApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Collections.Immutable.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.ComponentModel.Annotations.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Configuration.ConfigurationManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Configuration.ConfigurationManager.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Diagnostics.DiagnosticSource.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Drawing.Common.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Runtime.Caching.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Runtime.Caching.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Security.AccessControl.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Security.Permissions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Security.Principal.Windows.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Text.Encoding.CodePages.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Windows.Extensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/obj/PtcApi.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/PtcApi.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/obj/PtcApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/PtcApi.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/obj/PtcApi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/PtcApi.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/project.assets.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +103,7 @@
       <workItem from="1609636346710" duration="7015000" />
       <workItem from="1609798838370" duration="68000" />
       <workItem from="1610467177222" duration="182000" />
-      <workItem from="1611322500659" duration="6232000" />
+      <workItem from="1611322500659" duration="7578000" />
     </task>
     <servers />
   </component>

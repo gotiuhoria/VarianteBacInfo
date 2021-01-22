@@ -1,3 +1,5 @@
+using System;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PtcApi.Security;
@@ -10,16 +12,17 @@ namespace PtcApi.Controllers
   [Route("api/[controller]")]
   public class SecurityController : Controller
   {
-
-	private JwtSettings _settings = null;
+	private readonly JwtSettings _settings;
+	private readonly PtcDbContext _context;
 	private readonly UserManager<IdentityUser> _userManager;
 	private readonly SignInManager<IdentityUser> _signInManager;
 
-	public SecurityController(JwtSettings settings, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+	public SecurityController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, JwtSettings settings, PtcDbContext context)
 	{
-		_settings = settings;
 		_userManager = userManager;
 		_signInManager = signInManager;
+		_settings = settings;
+		_context = context;
 	}
 
     [HttpPost("login")]
@@ -42,24 +45,45 @@ namespace PtcApi.Controllers
 			//}
 
 			//return ret;
-
-			var result = await _userManager.FindByNameAsync(user.UserName);
-
-			if (result != null)
+			try
 			{
-				var signInResult = await _signInManager.PasswordSignInAsync(result, user.Password, false, false);
+				AppUserAuth auth = new AppUserAuth();
+				var result = await _userManager.FindByNameAsync(user.UserName);
 
-				if (signInResult.Succeeded)
+				if (result != null)
 				{
-					return StatusCode(StatusCodes.Status200OK);
+					var signInResult = await _signInManager.PasswordSignInAsync(result, user.Password, false, false);
+
+					if (signInResult.Succeeded)
+					{
+						auth.UserName = user.UserName;
+						var claims = await _userManager.GetClaimsAsync(result);
+						foreach (var claim in claims)
+						{
+							auth.Claims.Add(new AppUserClaim
+							{
+								UserId = result.Id,
+								ClaimType = claim.Type,
+								ClaimValue = claim.Value
+							});
+						}
+						auth.IsAuthenticated = true;
+						auth.BearerToken = new SecurityManager(_settings, _context).BuildJwtToken(auth);
+						return StatusCode(StatusCodes.Status200OK, auth);
+					}
 				}
+				else
+				{
+					return StatusCode(StatusCodes.Status404NotFound, "Invalid User Name/Password.");
+				}
+
+				return null;
 			}
-			else
+			catch (Exception e)
 			{
 				return StatusCode(StatusCodes.Status404NotFound, "Invalid User Name/Password.");
 			}
-
-			return null;
+			
     }
     
 
@@ -73,9 +97,16 @@ namespace PtcApi.Controllers
 			};
 
 			var result = await _userManager.CreateAsync(identityUser, user.Password);
+
 			IActionResult ret;
 			if (result.Succeeded)
 			{
+				var appUser = await _userManager.FindByNameAsync(user.UserName);
+				//await _userManager.AddClaimAsync(appUser, new Claim("CanAddProduct", "false"));
+				//await _userManager.AddClaimAsync(appUser, new Claim("CanAccessProducts", "true"));
+				//await _userManager.AddClaimAsync(appUser, new Claim("CanAddProduct", "true"));
+				//await _userManager.AddClaimAsync(appUser, new Claim("CanSaveProduct", "true"));
+				//await _userManager.AddClaimAsync(appUser, new Claim("CanAccessCategories", "true"));
 				ret = StatusCode(StatusCodes.Status200OK);
 			}
 			else

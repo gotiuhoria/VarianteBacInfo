@@ -14,6 +14,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json.Serialization;
 using PtcApi.Model;
+using PtcApi.Security;
 
 namespace PtcApi
 {
@@ -43,7 +44,6 @@ namespace PtcApi
 			settings = GetJwtSettings();
 			// Create singleton of JwtSettings
 			services.AddSingleton(settings);
-
 			// Register Jwt as the Authentication service
 			services.AddAuthentication(options =>
 			{

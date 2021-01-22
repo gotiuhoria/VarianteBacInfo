@@ -3,11 +3,72 @@
   <component name="ChangeListManager">
     <list default="true" id="8807c607-0d5f-4c53-9253-d38f6162c170" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/DesignTimeBuild/.dtbcache" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/DesignTimeBuild/.dtbcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/config/applicationhost.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/Server/sqlite3/storage.ide-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/.vs/PtcApi/v16/Server/sqlite3/storage.ide-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/Controllers/SecurityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/Controllers/SecurityController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/Model/PtcDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/Model/PtcDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/Model/SecurityManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/Model/SecurityManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/PtcApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/PtcApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Data.SqlClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Data.SqlClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.SqlServer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.SqlServer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Caching.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Caching.Memory.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.DependencyInjection.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Logging.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Options.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Identity.Client.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Identity.Client.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Protocols.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Win32.Registry.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/PtcApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/PtcApi.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/PtcApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/PtcApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/PtcApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/PtcApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Collections.Immutable.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.ComponentModel.Annotations.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Configuration.ConfigurationManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Configuration.ConfigurationManager.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Diagnostics.DiagnosticSource.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Drawing.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Runtime.Caching.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Runtime.Caching.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Security.AccessControl.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Security.Permissions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Security.Principal.Windows.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Text.Encoding.CodePages.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/System.Windows.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/bin/Debug/netcoreapp3.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.csprojAssemblyReference.cache" afterDir="false" />
@@ -15,6 +76,7 @@
       <change beforePath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/Debug/netcoreapp3.0/PtcApi.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/obj/PtcApi.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/PtcApi.csproj.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/obj/PtcApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/PtcApi.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PtcApi/obj/PtcApi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/PtcApi.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PtcApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../PtcApi/obj/project.assets.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,10 +104,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/MyProjects/POCIvanti/ResizableCharts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
     <property name="ts.external.directory.path" value="D:\Repos\VarianteBacInfo\VarianteBacInfo\VarianteBacInfo-1.0\PTC\node_modules\typescript\lib" />
@@ -56,9 +119,10 @@
       <recent name="D:\MyProjects\JWTAngular\PTC\src\app\security" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Angular CLI Server">
+  <component name="RunManager" selected="JavaScript Debug.Angular Application">
     <configuration name="Tests (PTC)" type="JavaScriptTestRunnerKarma">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
@@ -67,6 +131,7 @@
     <configuration name="E2E Tests (PTC)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
+      <protractor-package value="$PROJECT_DIR$/node_modules/protractor" />
       <protractor-options value="" />
       <envs />
       <scope-kind value="ALL" />
@@ -103,6 +168,7 @@
       <workItem from="1609636346710" duration="7015000" />
       <workItem from="1609798838370" duration="68000" />
       <workItem from="1610467177222" duration="182000" />
+      <workItem from="1611322500659" duration="6232000" />
     </task>
     <servers />
   </component>
@@ -118,10 +184,62 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="627" y="210" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609360698051" />
+    <state width="739" height="582" key="DebuggerActiveHint" timestamp="1611330051773">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="739" height="582" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1611330051773" />
     <state x="681" y="219" key="FileChooserDialogImpl" timestamp="1610467358633">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="681" y="219" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610467358633" />
+    <state width="1895" height="334" key="GridCell.Tab.0.bottom" timestamp="1611330679924">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1895" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1611330679924" />
+    <state width="1895" height="334" key="GridCell.Tab.0.center" timestamp="1611330679924">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1895" height="334" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1611330679924" />
+    <state width="1895" height="334" key="GridCell.Tab.0.left" timestamp="1611330679924">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1895" height="334" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1611330679924" />
+    <state width="1895" height="334" key="GridCell.Tab.0.right" timestamp="1611330679924">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1895" height="334" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1611330679924" />
+    <state width="1895" height="334" key="GridCell.Tab.1.bottom" timestamp="1611330679924">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1895" height="334" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1611330679924" />
+    <state width="1895" height="334" key="GridCell.Tab.1.center" timestamp="1611330679924">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1895" height="334" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1611330679924" />
+    <state width="1895" height="334" key="GridCell.Tab.1.left" timestamp="1611330679924">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1895" height="334" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1611330679924" />
+    <state width="1895" height="334" key="GridCell.Tab.1.right" timestamp="1611330679924">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1895" height="334" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1611330679924" />
+    <state width="1895" height="334" key="GridCell.Tab.2.bottom" timestamp="1611330679927">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1895" height="334" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1611330679927" />
+    <state width="1895" height="334" key="GridCell.Tab.2.center" timestamp="1611330679926">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1895" height="334" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1611330679926" />
+    <state width="1895" height="334" key="GridCell.Tab.2.left" timestamp="1611330679925">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1895" height="334" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1611330679925" />
+    <state width="1895" height="334" key="GridCell.Tab.2.right" timestamp="1611330679927">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1895" height="334" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1611330679927" />
     <state x="382" y="78" key="SettingsEditor" timestamp="1609282943899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

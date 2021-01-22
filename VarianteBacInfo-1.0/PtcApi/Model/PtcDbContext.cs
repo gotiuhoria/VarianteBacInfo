@@ -1,29 +1,17 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace PtcApi.Model
 {
-  public class PtcDbContext : DbContext
+  public class PtcDbContext : IdentityDbContext<IdentityUser>
   {
     public DbSet<Product> Products { get; set; }
     public DbSet<Category> Categories { get; set; }
-    public DbSet<AppUser> Users { get; set; }
-	public DbSet<AppUserClaim> Claims { get; set; }
 
-		private const string CONN =
-					  @"Server=DESKTOP-PO5O6HA\SQLEXPRESS;
-		                 Database=PTC-Pluralsight;
-		                 Trusted_Connection=True;
-		                 MultipleActiveResultSets=true";
+	public PtcDbContext(DbContextOptions<PtcDbContext> options) : base(options)
+	{
 
-		//private const string CONN = @"Server=(localdb)\MSSQLLocalDB;
-  //  Database=PTC-Pluralsight;
-  //  AttachDbFilename=D:\Samples\PTC\SqlData\PTC-Pluralsight.mdf;
-  //  MultipleActiveResultSets=true";
-
-    protected override void OnConfiguring(
-                DbContextOptionsBuilder optionsBuilder)
-    {
-      optionsBuilder.UseSqlServer(CONN);
-    }
+	}
   }
 }

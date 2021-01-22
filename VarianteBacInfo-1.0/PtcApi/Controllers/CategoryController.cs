@@ -11,8 +11,16 @@ namespace PtcApi.Controllers
   [Route("api/[controller]")]
   public class CategoryController : BaseApiController
   {
-    // GET api/values
-    [HttpGet]
+
+	  private readonly PtcDbContext _context;
+
+	  public CategoryController(PtcDbContext context)
+	  {
+		  _context = context;
+	  }
+
+	  // GET api/values
+	[HttpGet]
     public IActionResult Get()
     {
       IActionResult ret = null;
@@ -20,13 +28,12 @@ namespace PtcApi.Controllers
 
       try
       {
-        using (var db = new PtcDbContext())
-        {
-          if (db.Categories.Count() > 0)
+        
+          if (_context.Categories.Count() > 0)
           {
             // NOTE: Declare 'list' outside the using to avoid 
             // it being disposed before it is returned.
-            list = db.Categories.OrderBy(p => p.CategoryName).ToList();
+            list = _context.Categories.OrderBy(p => p.CategoryName).ToList();
             ret = StatusCode(StatusCodes.Status200OK, list);
           }
           else
@@ -34,7 +41,7 @@ namespace PtcApi.Controllers
             ret = StatusCode(StatusCodes.Status404NotFound,
                            "Can't Find Categories");
           }
-        }
+        
       }
       catch (Exception ex)
       {

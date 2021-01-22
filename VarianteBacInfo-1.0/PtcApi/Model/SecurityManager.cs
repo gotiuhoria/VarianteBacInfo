@@ -4,6 +4,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using PtcApi.Model;
 
@@ -12,28 +13,27 @@ namespace PtcApi.Security
 	public class SecurityManager
 	{
 		private JwtSettings _settings = null;
-		public SecurityManager(JwtSettings settings)
+		private readonly PtcDbContext _context;
+		public SecurityManager(JwtSettings settings, PtcDbContext context)
 		{
 			_settings = settings;
+			_context = context;
 		}
 
 		public AppUserAuth ValidateUser(AppUser user)
 		{
 			AppUserAuth ret = new AppUserAuth();
-			AppUser authUser = null;
+			IdentityUser authUser = null;
 
-			using (var db = new PtcDbContext())
-			{
+			
 				// Attempt to validate user
-				authUser = db.Users.Where(
-				  u => u.UserName.ToLower() == user.UserName.ToLower()
-				  && u.Password == user.Password).FirstOrDefault();
-			}
+				authUser = _context.Users.FirstOrDefault(u => string.Equals(u.UserName, user.UserName, StringComparison.CurrentCultureIgnoreCase));
+			
 
 			if (authUser != null)
 			{
 				// Build User Security Object
-				ret = BuildUserAuthObject(authUser);
+				//ret = BuildUserAuthObject(authUser);
 			}
 
 			return ret;
@@ -45,11 +45,10 @@ namespace PtcApi.Security
 
 			try
 			{
-				using (var db = new PtcDbContext())
-				{
-					list = db.Claims.Where(
-							 u => u.UserId == authUser.UserId).ToList();
-				}
+				
+					//list = _context.Claims.Where(
+					//		 u => u.UserId == authUser.UserId).ToList();
+				
 			}
 			catch (Exception ex)
 			{

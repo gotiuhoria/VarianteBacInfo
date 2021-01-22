@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SecurityService } from './security/security.service';
 import { LoginComponent } from './security/login.component';
+import { RegisterComponent } from './security/register.component';
 import { AuthGuard } from './security/auth.guard';
 import { HttpInterceptorModule } from './security/http-interceptor.module';
 import { HasClaimDirective } from './security/has-claim.directive';
@@ -25,6 +26,7 @@ import { HasClaimDirective } from './security/has-claim.directive';
     CategoryListComponent,
     DashboardComponent,
     LoginComponent,
+    RegisterComponent,
     HasClaimDirective
   ],
   imports: [

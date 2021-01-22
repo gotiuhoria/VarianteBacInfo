@@ -6,6 +6,7 @@ import { CategoryListComponent } from './category/category-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductDetailComponent } from './product/product-detail.component';
 import { LoginComponent } from './security/login.component';
+import { RegisterComponent } from './security/register.component';
 import { AuthGuard } from './security/auth.guard';
 
 const routes: Routes = [
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   },
   {
     path: 'products',

@@ -10,10 +10,18 @@ using Microsoft.AspNetCore.Authorization;
 namespace PtcApi.Controllers
 {
   [Route("api/[controller]")]
-	[Authorize]
+  [Authorize]
   public class ProductController : BaseApiController
   {
-    [HttpGet]
+
+	  private readonly PtcDbContext _context;
+
+	  public ProductController(PtcDbContext context)
+	  {
+		  _context = context;
+	  }
+
+	  [HttpGet]
 	[Authorize(Policy ="CanAccessProducts")]
     public IActionResult Get()
     {
@@ -22,18 +30,17 @@ namespace PtcApi.Controllers
 
       try
       {
-        using (var db = new PtcDbContext())
-        {
-          if (db.Products.Count() > 0)
+        
+          if (_context.Products.Count() > 0)
           {
-            list = db.Products.OrderBy(p => p.ProductName).ToList();
+            list = _context.Products.OrderBy(p => p.ProductName).ToList();
             ret = StatusCode(StatusCodes.Status200OK, list);
           }
           else
           {
             ret = StatusCode(StatusCodes.Status404NotFound, "Can't Find Products");
           }
-        }
+        
       }
       catch (Exception ex)
       {
@@ -51,9 +58,8 @@ namespace PtcApi.Controllers
 
       try
       {
-        using (var db = new PtcDbContext())
-        {
-          entity = db.Products.Find(id);
+        
+          entity = _context.Products.Find(id);
           if (entity != null)
           {
             ret = StatusCode(StatusCodes.Status200OK, entity);
@@ -63,7 +69,7 @@ namespace PtcApi.Controllers
             ret = StatusCode(StatusCodes.Status404NotFound,
                      "Can't Find Product: " + id.ToString());
           }
-        }
+        
       }
       catch (Exception ex)
       {
@@ -81,12 +87,11 @@ namespace PtcApi.Controllers
 
       try
       {
-        using (var db = new PtcDbContext())
-        {
+        
           if (entity != null)
           {
-            db.Products.Add(entity);
-            db.SaveChanges();
+            _context.Products.Add(entity);
+            _context.SaveChanges();
             ret = StatusCode(StatusCodes.Status201Created,
                 entity);
           }
@@ -94,7 +99,7 @@ namespace PtcApi.Controllers
           {
             ret = StatusCode(StatusCodes.Status400BadRequest, "Invalid object passed to POST method");
           }
-        }
+        
       }
       catch (Exception ex)
       {
@@ -111,19 +116,18 @@ namespace PtcApi.Controllers
 
       try
       {
-        using (var db = new PtcDbContext())
-        {
+        
           if (entity != null)
           {
-            db.Update(entity);
-            db.SaveChanges();
+            _context.Update(entity);
+            _context.SaveChanges();
             ret = StatusCode(StatusCodes.Status200OK, entity);
           }
           else
           {
             ret = StatusCode(StatusCodes.Status400BadRequest, "Invalid object passed to PUT method");
           }
-        }
+        
       }
       catch (Exception ex)
       {
@@ -141,16 +145,15 @@ namespace PtcApi.Controllers
 
       try
       {
-        using (var db = new PtcDbContext())
-        {
-          entity = db.Products.Find(id);
+        
+          entity = _context.Products.Find(id);
           if (entity != null)
           {
-            db.Products.Remove(entity);
-            db.SaveChanges();
+            _context.Products.Remove(entity);
+            _context.SaveChanges();
           }
           ret = StatusCode(StatusCodes.Status200OK, true);
-        }
+        
       }
       catch (Exception ex)
       {

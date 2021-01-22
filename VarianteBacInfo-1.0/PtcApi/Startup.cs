@@ -5,12 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json.Serialization;
+using PtcApi.Model;
 
 namespace PtcApi
 {
@@ -26,11 +29,20 @@ namespace PtcApi
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+			services.AddDbContext<PtcDbContext>(config => config.UseSqlServer(@"Server=DESKTOP-PO5O6HA\SQLEXPRESS;
+		                 Database=PTC-Pluralsight;
+		                 Trusted_Connection=True;
+		                 MultipleActiveResultSets=true"));
+
+			services.AddIdentity<IdentityUser, IdentityRole>()
+				.AddEntityFrameworkStores<PtcDbContext>()
+				.AddDefaultTokenProviders();
+
 			// Get JWT Token Settings from JwtSettings.json file
 			JwtSettings settings;
 			settings = GetJwtSettings();
 			// Create singleton of JwtSettings
-			services.AddSingleton<JwtSettings>(settings);
+			services.AddSingleton(settings);
 
 			// Register Jwt as the Authentication service
 			services.AddAuthentication(options =>
@@ -61,27 +73,32 @@ namespace PtcApi
 			cfg.AddPolicy("CanAccessProducts", p =>
 				p.RequireClaim("CanAccessProducts", "true")));
 
-			services.AddCors();
+			services.AddControllers();
 
-			services.AddMvc(options => options.EnableEndpointRouting = false);
+
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
-			if (env.IsDevelopment())
-			{
-				app.UseDeveloperExceptionPage();
-			}
 
 			app.UseCors(
 			  options => options.WithOrigins(
 				"http://localhost:4200").AllowAnyMethod().AllowAnyHeader()
 			);
 
+
+
+			app.UseRouting();
+
 			app.UseAuthentication();
 
-			app.UseMvc();
+			app.UseAuthorization();
+
+			app.UseEndpoints(endpoints =>
+			{
+				endpoints.MapDefaultControllerRoute();
+			});
 		}
 
 		public JwtSettings GetJwtSettings()

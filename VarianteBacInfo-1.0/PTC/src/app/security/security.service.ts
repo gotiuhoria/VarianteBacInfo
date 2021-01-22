@@ -38,6 +38,11 @@ export class SecurityService {
         }));
   }
 
+  register(entity: AppUser): Observable<any> {
+    return this.http.post<AppUserAuth>(API_URL + 'register',
+      entity, httpOptions);
+  }
+
   logout(): void {
     this.resetSecurityObject();
   }

@@ -23,6 +23,9 @@
         <a routerLink="login" *ngIf="!securityObject.isAuthenticated">
           Login
         </a>
+        <a routerLink="register" *ngIf="!securityObject.isAuthenticated">
+          Register
+        </a>
         <a href="#" onclick="logout()" *ngIf="securityObject.isAuthenticated">
           Logout {{securityObject.userName}}
         </a>

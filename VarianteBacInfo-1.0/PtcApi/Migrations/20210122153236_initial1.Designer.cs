@@ -9,7 +9,7 @@ using PtcApi.Model;
 
 namespace PtcApi.Migrations
 {
-    [DbContext(typeof(PtcDbContext))]
+    [DbContext(typeof(EfDbContext))]
     [Migration("20210122153236_initial1")]
     partial class initial1
     {

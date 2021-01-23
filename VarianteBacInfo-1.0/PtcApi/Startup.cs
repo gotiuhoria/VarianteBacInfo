@@ -1,20 +1,13 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Newtonsoft.Json.Serialization;
 using PtcApi.Model;
-using PtcApi.Security;
 
 namespace PtcApi
 {
@@ -30,13 +23,13 @@ namespace PtcApi
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddDbContext<PtcDbContext>(config => config.UseSqlServer(@"Server=DESKTOP-PO5O6HA\SQLEXPRESS;
+			services.AddDbContext<EfDbContext>(config => config.UseSqlServer(@"Server=DESKTOP-PO5O6HA\SQLEXPRESS;
 		                 Database=PTC-Pluralsight;
 		                 Trusted_Connection=True;
 		                 MultipleActiveResultSets=true"));
 
 			services.AddIdentity<IdentityUser, IdentityRole>()
-				.AddEntityFrameworkStores<PtcDbContext>()
+				.AddEntityFrameworkStores<EfDbContext>()
 				.AddDefaultTokenProviders();
 
 			// Get JWT Token Settings from JwtSettings.json file
@@ -44,6 +37,9 @@ namespace PtcApi
 			settings = GetJwtSettings();
 			// Create singleton of JwtSettings
 			services.AddSingleton(settings);
+
+			services.AddTransient<ISecurityManager, SecurityManager>();
+
 			// Register Jwt as the Authentication service
 			services.AddAuthentication(options =>
 			{

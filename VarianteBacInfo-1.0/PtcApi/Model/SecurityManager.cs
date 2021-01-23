@@ -1,91 +1,55 @@
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
-using PtcApi.Model;
 
-namespace PtcApi.Security
+namespace PtcApi.Model
 {
-	public class SecurityManager
+	public class SecurityManager : ISecurityManager
 	{
-		private JwtSettings _settings = null;
-		private readonly PtcDbContext _context;
-		public SecurityManager(JwtSettings settings, PtcDbContext context)
+		private readonly JwtSettings _settings;
+		private readonly EfDbContext _context;
+		private readonly UserManager<IdentityUser> _userManager;
+		public SecurityManager(JwtSettings settings, EfDbContext context, UserManager<IdentityUser> userManager)
 		{
 			_settings = settings;
 			_context = context;
+			_userManager = userManager;
 		}
 
-		public AppUserAuth ValidateUser(AppUser user)
+		public async Task<AppUserAuth> BuildAppUserAuth(IdentityUser user)
 		{
-			AppUserAuth ret = new AppUserAuth();
-			IdentityUser authUser = null;
+			var userAuth = new AppUserAuth();
 
-			
-				// Attempt to validate user
-				authUser = _context.Users.FirstOrDefault(u => string.Equals(u.UserName, user.UserName, StringComparison.CurrentCultureIgnoreCase));
-			
-
-			if (authUser != null)
+			userAuth.UserName = user.UserName;
+			var claims = await _userManager.GetClaimsAsync(user);
+			foreach (var claim in claims)
 			{
-				// Build User Security Object
-				//ret = BuildUserAuthObject(authUser);
+				userAuth.Claims.Add(new AppUserClaim
+				{
+					UserId = user.Id,
+					ClaimType = claim.Type,
+					ClaimValue = claim.Value
+				});
 			}
+			userAuth.IsAuthenticated = true;
+			userAuth.BearerToken = BuildJwtToken(userAuth);
 
-			return ret;
-		}
+			return userAuth;
 
-		protected List<AppUserClaim> GetUserClaims(AppUser authUser)
-		{
-			List<AppUserClaim> list = new List<AppUserClaim>();
-
-			try
-			{
-				
-					//list = _context.Claims.Where(
-					//		 u => u.UserId == authUser.UserId).ToList();
-				
-			}
-			catch (Exception ex)
-			{
-				throw new Exception(
-					"Exception trying to retrieve user claims.", ex);
-			}
-
-			return list;
-		}
-
-		protected AppUserAuth BuildUserAuthObject(AppUser authUser)
-		{
-			var ret = new AppUserAuth
-			{
-				UserName = authUser.UserName,
-				IsAuthenticated = true,
-				BearerToken = new Guid().ToString(),
-				Claims = GetUserClaims(authUser)
-			};
-
-			// Set User Properties
-
-			// Get all claims for this user
-
-			// Set JWT bearer token
-			ret.BearerToken = BuildJwtToken(ret);
-
-			return ret;
 		}
 
 		public string BuildJwtToken(AppUserAuth authUser)
 		{
-			SymmetricSecurityKey key = new SymmetricSecurityKey(
+			var key = new SymmetricSecurityKey(
 			  Encoding.UTF8.GetBytes(_settings.Key));
 
 			// Create standard JWT claims
-			List<Claim> jwtClaims = new List<Claim>();
+			var jwtClaims = new List<Claim>();
 			
 			foreach(var claim in authUser.Claims)
 			{
@@ -94,13 +58,13 @@ namespace PtcApi.Security
 
 			// Create the JwtSecurityToken object
 			var token = new JwtSecurityToken(
-			  issuer: _settings.Issuer,
-			  audience: _settings.Audience,
-			  claims: jwtClaims,
-			  notBefore: DateTime.UtcNow,
-			  expires: DateTime.UtcNow.AddMinutes(
+			  _settings.Issuer,
+			  _settings.Audience,
+			  jwtClaims,
+			  DateTime.UtcNow,
+			  DateTime.UtcNow.AddMinutes(
 				  _settings.MinutesToExpiration),
-			  signingCredentials: new SigningCredentials(key,
+			  new SigningCredentials(key,
 						  SecurityAlgorithms.HmacSha256)
 			);
 

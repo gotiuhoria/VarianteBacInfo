@@ -22,6 +22,14 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    this.securityService.register(this.user).subscribe();
+    this.securityService.register(this.user).subscribe(resp => {
+        if (this.returnUrl) {
+          this.router.navigateByUrl(this.returnUrl);
+        }
+      },
+      () => {
+        // Initialize security object to display error message
+        this.securityObject = new AppUserAuth();
+      });
   }
 }

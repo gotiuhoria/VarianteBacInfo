@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace PtcApi.Model
 {
-  public class PtcDbContext : IdentityDbContext<IdentityUser>
+  public class EfDbContext : IdentityDbContext<IdentityUser>
   {
     public DbSet<Product> Products { get; set; }
     public DbSet<Category> Categories { get; set; }
 
-	public PtcDbContext(DbContextOptions<PtcDbContext> options) : base(options)
+	public EfDbContext(DbContextOptions<EfDbContext> options) : base(options)
 	{
 
 	}

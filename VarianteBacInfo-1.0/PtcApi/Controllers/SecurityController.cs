@@ -1,8 +1,6 @@
 using System;
-using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PtcApi.Security;
 using PtcApi.Model;
 using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
@@ -11,111 +9,63 @@ namespace PtcApi.Controllers
 {
   [Route("api/[controller]")]
   public class SecurityController : Controller
-  {
-	private readonly JwtSettings _settings;
-	private readonly PtcDbContext _context;
+  { 
+	
 	private readonly UserManager<IdentityUser> _userManager;
 	private readonly SignInManager<IdentityUser> _signInManager;
+	private readonly ISecurityManager _securityManager;
 
-	public SecurityController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, JwtSettings settings, PtcDbContext context)
+	public SecurityController(
+		UserManager<IdentityUser> userManager, 
+		SignInManager<IdentityUser> signInManager, 
+		ISecurityManager securityManager)
 	{
 		_userManager = userManager;
 		_signInManager = signInManager;
-		_settings = settings;
-		_context = context;
+		_securityManager = securityManager;
 	}
 
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody]AppUser user)
     {
-			//AppUserAuth auth = new AppUserAuth();
-			//SecurityManager mgr = new SecurityManager(_settings);
+	    try
+	    {
+		    var result = await _userManager.FindByNameAsync(user.UserName);
 
-			//auth = mgr.ValidateUser(user);
+		    if (result != null)
+		    {
+			    var signInResult = await _signInManager.PasswordSignInAsync(result, user.Password, false, false);
 
-			//IActionResult ret;
-			//if (auth.IsAuthenticated)
-			//{
-			//	ret = StatusCode(StatusCodes.Status200OK, auth);
-			//}
-			//else
-			//{
-			//	ret = StatusCode(StatusCodes.Status404NotFound,
-			//						"Invalid User Name/Password.");
-			//}
+			    if (signInResult.Succeeded)
+			    {
+				    var auth = await _securityManager.BuildAppUserAuth(result);
+				    return StatusCode(StatusCodes.Status200OK, auth);
+			    }
 
-			//return ret;
-			try
-			{
-				AppUserAuth auth = new AppUserAuth();
-				var result = await _userManager.FindByNameAsync(user.UserName);
+			    return StatusCode(StatusCodes.Status404NotFound, "Invalid User Name/Password.");
+		    }
 
-				if (result != null)
-				{
-					var signInResult = await _signInManager.PasswordSignInAsync(result, user.Password, false, false);
+		    return StatusCode(StatusCodes.Status404NotFound, "Invalid User Name/Password.");
 
-					if (signInResult.Succeeded)
-					{
-						auth.UserName = user.UserName;
-						var claims = await _userManager.GetClaimsAsync(result);
-						foreach (var claim in claims)
-						{
-							auth.Claims.Add(new AppUserClaim
-							{
-								UserId = result.Id,
-								ClaimType = claim.Type,
-								ClaimValue = claim.Value
-							});
-						}
-						auth.IsAuthenticated = true;
-						auth.BearerToken = new SecurityManager(_settings, _context).BuildJwtToken(auth);
-						return StatusCode(StatusCodes.Status200OK, auth);
-					}
-				}
-				else
-				{
-					return StatusCode(StatusCodes.Status404NotFound, "Invalid User Name/Password.");
-				}
 
-				return null;
-			}
-			catch (Exception e)
-			{
-				return StatusCode(StatusCodes.Status404NotFound, "Invalid User Name/Password.");
-			}
-			
+	    }
+	    catch (Exception e)
+	    {
+		    return StatusCode(StatusCodes.Status500InternalServerError, e.Message);
+	    }
     }
     
-
-		[HttpPost("register")]
-		public async Task<IActionResult> Register([FromBody]AppUser user)
+	[HttpPost("register")]
+	public async Task<IActionResult> Register([FromBody]AppUser user)
+	{
+		var identityUser = new IdentityUser
 		{
-			var identityUser = new IdentityUser
-			{
-				UserName = user.UserName,
-				Email = ""
-			};
+			UserName = user.UserName
+		};
 
-			var result = await _userManager.CreateAsync(identityUser, user.Password);
+		var result = await _userManager.CreateAsync(identityUser, user.Password);
 
-			IActionResult ret;
-			if (result.Succeeded)
-			{
-				var appUser = await _userManager.FindByNameAsync(user.UserName);
-				//await _userManager.AddClaimAsync(appUser, new Claim("CanAddProduct", "false"));
-				//await _userManager.AddClaimAsync(appUser, new Claim("CanAccessProducts", "true"));
-				//await _userManager.AddClaimAsync(appUser, new Claim("CanAddProduct", "true"));
-				//await _userManager.AddClaimAsync(appUser, new Claim("CanSaveProduct", "true"));
-				//await _userManager.AddClaimAsync(appUser, new Claim("CanAccessCategories", "true"));
-				ret = StatusCode(StatusCodes.Status200OK);
-			}
-			else
-			{
-				ret = StatusCode(StatusCodes.Status404NotFound,
-								"Invalid User Name/Password.");
-			}
-
-			return ret;
-		}
+		return StatusCode(result.Succeeded ? StatusCodes.Status201Created : StatusCodes.Status409Conflict);
+	}
   }
 }

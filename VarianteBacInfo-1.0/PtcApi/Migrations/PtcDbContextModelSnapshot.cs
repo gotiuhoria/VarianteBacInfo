@@ -8,7 +8,7 @@ using PtcApi.Model;
 
 namespace PtcApi.Migrations
 {
-    [DbContext(typeof(PtcDbContext))]
+    [DbContext(typeof(EfDbContext))]
     partial class PtcDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

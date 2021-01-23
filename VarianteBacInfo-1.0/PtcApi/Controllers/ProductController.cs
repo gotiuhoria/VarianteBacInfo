@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using PtcApi.Model;
@@ -11,30 +9,30 @@ namespace PtcApi.Controllers
 {
   [Route("api/[controller]")]
   [Authorize]
-  public class ProductController : BaseApiController
+  public class ProductController : Controller
   {
 
-	  private readonly PtcDbContext _context;
+	  private readonly EfDbContext _context;
 
-	  public ProductController(PtcDbContext context)
+	  public ProductController(EfDbContext context)
 	  {
 		  _context = context;
 	  }
-
-	  [HttpGet]
+	  
+	
+	[HttpGet]
 	[Authorize(Policy ="CanAccessProducts")]
     public IActionResult Get()
     {
-      IActionResult ret = null;
-      List<Product> list = new List<Product>();
+      IActionResult ret;
 
       try
       {
         
-          if (_context.Products.Count() > 0)
+          if (_context.Products.Any())
           {
-            list = _context.Products.OrderBy(p => p.ProductName).ToList();
-            ret = StatusCode(StatusCodes.Status200OK, list);
+	          var list = _context.Products.OrderBy(p => p.ProductName).ToList();
+	          ret = StatusCode(StatusCodes.Status200OK, list);
           }
           else
           {
@@ -44,7 +42,8 @@ namespace PtcApi.Controllers
       }
       catch (Exception ex)
       {
-        ret = HandleException(ex, "Exception trying to get all products");
+        ret = StatusCode(StatusCodes.Status500InternalServerError, new Exception("Exception trying to get all products", ex));
+
       }
 
       return ret;
@@ -53,37 +52,33 @@ namespace PtcApi.Controllers
     [HttpGet("{id}", Name = "Get")]
     public IActionResult Get(int id)
     {
-      IActionResult ret = null;
-      Product entity = null;
+      IActionResult ret;
 
       try
       {
-        
-          entity = _context.Products.Find(id);
-          if (entity != null)
+	      var entity = _context.Products.Find(id);
+	      if (entity != null)
           {
             ret = StatusCode(StatusCodes.Status200OK, entity);
           }
           else
           {
             ret = StatusCode(StatusCodes.Status404NotFound,
-                     "Can't Find Product: " + id.ToString());
+                     "Can't Find Product: " + id);
           }
-        
       }
       catch (Exception ex)
       {
-        ret = HandleException(ex,
-          "Exception trying to retrieve a single product.");
+		ret = StatusCode(StatusCodes.Status500InternalServerError, new Exception("Exception trying to retrieve a single product.", ex));
       }
 
       return ret;
     }
 
-    [HttpPost()]
+    [HttpPost]
     public IActionResult Post([FromBody]Product entity)
     {
-      IActionResult ret = null;
+      IActionResult ret;
 
       try
       {
@@ -103,13 +98,13 @@ namespace PtcApi.Controllers
       }
       catch (Exception ex)
       {
-        ret = HandleException(ex, "Exception trying to insert a new product");
+        ret = StatusCode(StatusCodes.Status500InternalServerError, new Exception("Exception trying to insert a new product", ex)); ;
       }
 
       return ret;
     }
 
-    [HttpPut()]
+    [HttpPut]
     public IActionResult Put([FromBody]Product entity)
     {
       IActionResult ret = null;
@@ -131,7 +126,8 @@ namespace PtcApi.Controllers
       }
       catch (Exception ex)
       {
-        ret = HandleException(ex, "Exception trying to update product: " + entity.ProductId.ToString());
+	      if (entity != null)
+		      ret = StatusCode(StatusCodes.Status500InternalServerError, new Exception("Exception trying to update product: " + entity.ProductId, ex));
       }
 
       return ret;
@@ -140,13 +136,12 @@ namespace PtcApi.Controllers
     [HttpDelete("{id}")]
     public IActionResult Delete(int id)
     {
-      IActionResult ret = null;
-      Product entity = null;
+      IActionResult ret;
 
       try
       {
         
-          entity = _context.Products.Find(id);
+          var entity = _context.Products.Find(id);
           if (entity != null)
           {
             _context.Products.Remove(entity);
@@ -157,7 +152,7 @@ namespace PtcApi.Controllers
       }
       catch (Exception ex)
       {
-        ret = HandleException(ex, "Exception trying to delete product: " + id.ToString());
+		ret = StatusCode(StatusCodes.Status500InternalServerError, new Exception("Exception trying to delete product: " + id, ex));
       }
 
       return ret;

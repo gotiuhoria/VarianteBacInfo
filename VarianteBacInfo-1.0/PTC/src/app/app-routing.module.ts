@@ -8,6 +8,7 @@ import { ProductDetailComponent } from './product/product-detail.component';
 import { LoginComponent } from './security/login.component';
 import { RegisterComponent } from './security/register.component';
 import { AuthGuard } from './security/auth.guard';
+import {CodeEditorComponent} from './CodeEditor/code-editor.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'editor',
+    component: CodeEditorComponent
   },
   {
     path: 'products',

@@ -17,6 +17,8 @@ import { RegisterComponent } from './security/register.component';
 import { AuthGuard } from './security/auth.guard';
 import { HttpInterceptorModule } from './security/http-interceptor.module';
 import { HasClaimDirective } from './security/has-claim.directive';
+import { CodemirrorModule } from '@ctrl/ngx-codemirror';
+import { CodeEditorComponent } from './CodeEditor/code-editor.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +29,16 @@ import { HasClaimDirective } from './security/has-claim.directive';
     DashboardComponent,
     LoginComponent,
     RegisterComponent,
-    HasClaimDirective
+    HasClaimDirective,
+    CodeEditorComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    HttpInterceptorModule
+    HttpInterceptorModule,
+    CodemirrorModule
   ],
   providers: [ProductService, CategoryService, SecurityService, AuthGuard],
   bootstrap: [AppComponent]

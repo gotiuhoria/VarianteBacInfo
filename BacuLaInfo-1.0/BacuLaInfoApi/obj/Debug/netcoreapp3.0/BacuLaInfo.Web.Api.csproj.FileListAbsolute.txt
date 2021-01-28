@@ -45,3 +45,5 @@ D:\Repos\VarianteBacInfo\VarianteBacInfo\BacuLaInfo-1.0\BacuLaInfoApi\obj\Debug\
 D:\Repos\VarianteBacInfo\VarianteBacInfo\BacuLaInfo-1.0\BacuLaInfoApi\obj\Debug\netcoreapp3.0\BacuLaInfo.Web.Api.dll
 D:\Repos\VarianteBacInfo\VarianteBacInfo\BacuLaInfo-1.0\BacuLaInfoApi\obj\Debug\netcoreapp3.0\BacuLaInfo.Web.Api.pdb
 D:\Repos\VarianteBacInfo\VarianteBacInfo\BacuLaInfo-1.0\BacuLaInfoApi\obj\Debug\netcoreapp3.0\BacuLaInfo.Web.Api.genruntimeconfig.cache
+D:\Repos\VarianteBacInfo\VarianteBacInfo\BacuLaInfo-1.0\BacuLaInfoApi\obj\Debug\netcoreapp3.0\BacuLaInfo.Web.Api.csprojAssemblyReference.cache
+D:\Repos\VarianteBacInfo\VarianteBacInfo\BacuLaInfo-1.0\BacuLaInfoApi\bin\Debug\netcoreapp3.0\package-lock.json

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using PtcApi.Model;
+using BacuLaInfo.Web.Api.Model;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
-namespace PtcApi.Controllers
+namespace BacuLaInfo.Web.Api.Controllers
 {
   [Route("api/[controller]")]
   [Authorize]

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace PtcApi.Model
+namespace BacuLaInfo.Web.Api.Model
 {
   public class AppUserAuth
   {

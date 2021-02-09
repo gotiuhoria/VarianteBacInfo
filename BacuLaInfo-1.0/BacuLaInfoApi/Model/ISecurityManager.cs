@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
-namespace PtcApi.Model
+namespace BacuLaInfo.Web.Api.Model
 {
 	public interface ISecurityManager
 	{

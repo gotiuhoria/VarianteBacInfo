@@ -1,11 +1,11 @@
 using System;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using PtcApi.Model;
-using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
+using BacuLaInfo.Web.Api.Model;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
-namespace PtcApi.Controllers
+namespace BacuLaInfo.Web.Api.Controllers
 {
   [Route("api/[controller]")]
   public class SecurityController : Controller
@@ -67,5 +67,12 @@ namespace PtcApi.Controllers
 
 		return StatusCode(result.Succeeded ? StatusCodes.Status201Created : StatusCodes.Status409Conflict);
 	}
-  }
+
+	[HttpPost("validate")]
+	public IActionResult Validate([FromBody]EditorContent content)
+	{
+		return StatusCode(StatusCodes.Status200OK);
+	}
+
+	}
 }

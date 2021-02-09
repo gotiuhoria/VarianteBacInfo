@@ -1,5 +1,6 @@
 using System;
 using System.Text;
+using BacuLaInfo.Web.Api.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -7,9 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using PtcApi.Model;
 
-namespace PtcApi
+namespace BacuLaInfo.Web.Api
 {
 	public class Startup
 	{

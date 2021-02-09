@@ -1,8 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {SecurityService} from '../security/security.service';
+import {Content} from '@angular/compiler/src/render3/r3_ast';
+import {EditorContent} from './EditorContent';
+import {ValidationResult} from './ValidationResult';
 
 const API_URL = 'http://localhost:5000/api/codeeditor/';
-
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+};
 @Component({
   selector: 'code-editor',
   templateUrl: './code-editor.component.html',
@@ -20,21 +28,24 @@ export class CodeEditorComponent implements OnInit {
     matchBrackets: true,
     lint: true
   };
+  validationResult: ValidationResult;
+  private result: string;
 
-   httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  };
 
-  constructor(private http: HttpClient) {
+
+  constructor(private securityService: SecurityService) {
   }
 
   ngOnInit() {
   }
 
   Validate() {
-    return this.http.post<string>(API_URL + 'validate',
-      this.editorContent, this.httpOptions);
+    const editorContent: EditorContent = new EditorContent();
+    editorContent.content = this.editorContent;
+    editorContent.contentType = 'C';
+    this.securityService.validateEditorContent(editorContent).subscribe( resp => {
+      this.validationResult = resp;
+      this.result = this.validationResult.result
+      });
   }
 }

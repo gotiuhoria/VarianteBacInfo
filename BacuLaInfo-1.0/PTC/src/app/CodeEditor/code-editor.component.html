@@ -4,4 +4,10 @@
                 [options]="codeMirrorOptions"
                 [(ngModel)]="editorContent">
 </ngx-codemirror>
+<textarea
+  [(ngModel)]="result"
+  rows="10"
+  cols="60"
+>
+</textarea>
 <button mat-raised-button color="primary" (click)="Validate()">Validate</button>

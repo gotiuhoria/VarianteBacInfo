@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace PtcApi.Model
+namespace BacuLaInfo.Web.Api.Model
 {
   public class EfDbContext : IdentityDbContext<IdentityUser>
   {

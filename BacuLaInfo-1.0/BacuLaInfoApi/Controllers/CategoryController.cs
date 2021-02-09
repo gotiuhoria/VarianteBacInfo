@@ -1,10 +1,10 @@
 using System;
 using System.Linq;
+using BacuLaInfo.Web.Api.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PtcApi.Model;
 
-namespace PtcApi.Controllers
+namespace BacuLaInfo.Web.Api.Controllers
 {
   [Route("api/[controller]")]
   public class CategoryController : Controller

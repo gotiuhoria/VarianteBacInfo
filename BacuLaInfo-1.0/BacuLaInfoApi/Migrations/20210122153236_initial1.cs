@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace PtcApi.Migrations
+namespace BacuLaInfo.Web.Api.Migrations
 {
     public partial class initial1 : Migration
     {

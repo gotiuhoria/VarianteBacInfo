@@ -5,6 +5,7 @@ import { tap } from 'rxjs/operators';
 
 import { AppUserAuth } from './app-user-auth';
 import { AppUser } from './app-user';
+import {EditorContent} from '../CodeEditor/EditorContent';
 
 const API_URL = 'http://localhost:5000/api/security/';
 
@@ -35,6 +36,11 @@ export class SecurityService {
           localStorage.setItem('bearerToken',
             this.securityObject.bearerToken);
         }));
+  }
+
+  validateEditorContent(editorContent: EditorContent): Observable<any> {
+    return this.http.post<string>('http://localhost:5000/api/codeeditor/validate',
+      editorContent, httpOptions);
   }
 
   register(entity: AppUser): Observable<any> {
